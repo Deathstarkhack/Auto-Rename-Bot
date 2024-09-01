@@ -13,10 +13,10 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
+    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/0ca56bccbc14d4f8865f8.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6662614290').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
-    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'AshutoshGoswami24,BotzPW').split('-1002148170490,-1002226560829')
+    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', '-1002148170490,-1002226560829').split(',')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002168643307"))
     PORT = int(os.environ.get("PORT", "8030"))
     
